@@ -1,5 +1,5 @@
 <?php
-    $con=new mysqli("localhost","root","","rpgdb") or die("Error");
+    include "conndatabase.php";
     if(isset($_POST['sbtn'])){
         $id=$_POST['id'];
         $checkvail="select * from rpgtable where `SL`='".$id."'";

@@ -1,6 +1,5 @@
 <?php
-    $con=new mysqli("localhost","root","") or die("Ops");
-    $con->select_db("rpgdb") or die("Ops 2");
+    include "conndatabase.php";
 
     $chk="Select * from rpgtable";
     $query=$con->query($chk);

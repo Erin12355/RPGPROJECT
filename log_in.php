@@ -1,3 +1,8 @@
+<?php
+    if(count($_COOKIE)>0){
+        header("Location: admin_home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +73,8 @@
             echo '<script>document.getElementById("errorarea").style.visibility="visible"; document.getElementById("errorarea").innerHTML="Error in Username or Password";document.getElementById("errorarea").style.color="red";</script>';
         }
         else{
-            header("location: rpg_registration.html");
+            setcookie("user",$name);
+            header("location: admin_home.php");
         }
         
 
