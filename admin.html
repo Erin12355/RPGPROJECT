@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_dataStore</title>
+    <link rel = "icon" href = "images/logo_latest.png" type = "image/x-icon">
+    <style>
+        .container{min-width:2000px;min-height: 1000px;background-image: url(images/backgrnd.jpg);color: #fff;margin-left: auto;margin-right: auto;text-align: center;background-repeat: no-repeat;background-size:cover; }
+        table{ border: 2px solid rgb(0, 0, 0);}
+        table{ min-width:2000px;}
+        .box { min-width: 100px;}
+        header img{width: 200px;height: 200px;}
+        td{padding:10px;}
+        header{background-color:rgba(255, 255, 255, 0.747);}
+        .printer{float:right;width:40px;height:30px;}
+        button{float:right;}
+        table{background-color: rgba(255, 255, 255, 0.747);color:black;}
+        .mobile_display{display: none;}
+        @media(max-width:800px){body{max-width:700px;max-height:700px;}.container{display: none;}.mobile_display{display:block;margin-top: 10%;color: red;}}
+    </style>
+</head>
+<body style="min-width:2000px;">
+    <div class="container">
+        <header>
+            <a href="index.html"><img  src="images/logo_latest.png" alt=""></a><br>
+            <button onclick="window.print()"><img src="images/printer.svg" alt="" class="printer"></button>
+
+        </header>
+            <a href="fetch.php"><button type="button" name="btn" >Hit me</button></a>
+        <table>
+           
+                <thead style="color:red;background-color:white;font-weight: bold;">
+                    <td class="box_sl">SL NO.</td>
+                    <td class="box_fname">NAME</td>
+                    <td class="box_address">ADDRESS</td>
+                    <td class="box_gender">GENDER</td>
+                    <td class="box_dist">DISTRICT</td>
+                     <!-- CHANGE      -->
+                    <td class="box_cont">CONTACT NUMBER</td>
+                    <td class="box_wano">WHATSAPP NUMBER</td>
+                    <td class="box_mail">EMAIL</td>
+                    <td class="box_occu">OCCUPATION</td>
+                    <td class="box_highqual">HIGHEST QUALIFICATION</td>
+                    <td class="box_dob">DATE OF BIRTH</td>
+                    <td class="box_course">COURSE</td>
+                    <!-- CHANGE   -->
+                </thead>
+        </table>
+    </div>   
+    <div class="mobile_display">
+        <em>PLEASE LOG-IN FROM DESKTOP SITE!!!!!!</em>
+    </div>
+</body>
+</html>

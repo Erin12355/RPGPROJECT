@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel = "icon" href = "images/logo_latest.png" type = "image/x-icon">
+    <script src="validate.js"></script>
+    <style>
+        body{background-image: url(images/backgrnd.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            align-items: center;}
+        .container{
+			border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.863);
+            padding-top: 40px;
+            max-width: 1080px;
+            min-height:800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            padding-top:0;   }
+        .header{
+            background-image: linear-gradient(#3EECAC#EE74E1);
+            max-height: 300px;
+            align-items: center;
+            border-radius:10px;
+            padding-top: -50px; 
+         }
+        .logo{
+            text-align: center;
+          }
+        img{
+            width: 300px;
+            height: 250px;
+            text-align: center;
+            max-height: 300px; 
+         }
+        hr {
+            position: relative;
+            top: 20px;
+            border: none;
+            height: 12px;
+            background: black;
+            margin-bottom: 20px;
+        }
+        .main{
+            min-height: 1000px;
+         }
+        .name{
+            padding-top: 20px;
+        }
+        .first_name{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .main_container{
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align:center;
+            color:black; 
+          }
+        .contain{
+            margin-bottom: 30px;
+            margin-right: 20px;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 70%;
+            height:25px;
+        }
+        .district select{
+            height:40px;
+        }
+        .dob .contain{
+             margin-right: 5px;
+             margin-left: 5px;
+            }
+        .name .contain{
+            text-transform: capitalize;
+            text-transform:uppercase
+        }
+        .address .contain{
+            text-transform: capitalize;
+        }
+        .dob .contain{
+            outline: none;
+            overflow: hidden;
+        }
+        .submit{
+            margin-top: 10px;
+            width:50%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color:rgba(255, 123, 0, 0.918);
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+        }
+        h5{ 
+            margin-top: 10px;
+            padding-bottom: 20px;
+        }
+        label{
+            font-size:20px;
+        }
+        .dob .contain{
+            margin-left: -15px;
+        }
+        .photo{
+            margin-top: 20px;
+        }
+        .submit:hover{
+            background-color:#fff;
+        }
+        @media (max-width:600px)
+        {
+            .container{
+                width: 80%;height:100%;
+				border-radius: 10px;
+            }
+			body{
+				font-size: 7px;
+			}
+			label{
+				font-size: 13px;
+			}
+			img{
+				width: 30%;
+				height: 20%;
+			}
+        }
+           
+    </style>
+</head>
+<body >
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                    <a href="index.html"><img src="images/logo_latest.png" alt="RPG_LOGO"></a>
+        
+            </div>
+            <h3 style="text-align: center;color:black">
+                <em>Come, join us in our journey, where our main pivot is both financial and emotional growth....</em>
+            </h3>
+        </div>
+        <hr>
+        <!-- Main-BODY -->
+        <div class="main">
+            <div class="main_container">
+                <form autocomplete="on" method="POST" action="regdb.php" enctype="multipart/form-data" onsubmit="return validate();">
+                   <div class="name">
+                        <label for="name">NAME:</label><br>
+                        <input type="text" name="fname" id="fname" placeholder="Full Name" class="contain">
+                   </div>
+                   <div class="address">
+                        <label for="address">ADDRESS:</label><br>
+                        <input type="text" id="address" name="address" placeholder="--Address--" class="contain">
+                   </div>
+                   <div class="gender" name="gender">
+                       <label for="gender">GENDER:</label><br>
+                       <label for="male">Male</label>
+                       <input type="radio" value="MALE" name="gender"id="male" style="margin-right: 20px;">
+                       <label for="female">Female</label>
+                       <input type="radio" value="FEMALE" name="gender" id="female" style="margin-right: 20px;">
+                       <label for="others">Others</label>
+                       <input type="radio" value="OTHERS" name="gender" id="others" style="margin-right: 20px;">
+                   </div>
+                   <div class="district"style="margin-top: 20px;">
+                       <label for="district">DISTRICT:</label><br>
+                           <select name="district" id="district" class="contain">
+                               <option value="" selected="selected">-----Please Select-----</option>
+                               <option value="Bishnupur">Bishnupur</option>
+                               <option value="Thoubal">Thoubal</option>
+                               <option value="Imphal East">Imphal East</option>
+                               <option value="Imphal West">Imphal West</option>
+                               <option value="Senapati">Senapati</option>
+                               <option value="Ukhrul">Ukhrul</option>
+                               <option value="Chandel">Chandel</option>
+                               <option value="Churachandpur">Churachandpur</option>
+                               <option value="Tamenglong">Tamenglong</option>
+                               <option value="Jiribam">Jiribam</option>
+                               <option value="Kangpokpi (Sadar Hills)">Kangpokpi (Sadar Hills)</option>
+                               <option value="Kakching">Kakching</option>
+                               <option value="Tengnoupal">Tengnoupal</option>
+                               <option value="Kamjong">Kamjong</option>
+                               <option value="Noney">Noney</option>
+                               <option value="Pherzawl">Pherzawl</option>
+                           </select>
+                   </div>
+                   <div class="contact_number" onkeyup="sameno()">
+                       <label for="contact">CONTACT-NUMBER:</label><br>
+                       <input type="tel" id="contact_number"  name="contact_number"   class="contain" onfocusout="icon('iconcn','contact_number')" onkeyup="numval('cn')">
+                       <span id="iconcn"></span>
+                   </div>
+                   <label style="font-size: 16px;" onclick="sameno()"><input type="checkbox" name="sameno" id="sameno"> Check if WhatsApp Number & Contact Number are same.</label><br><br>
+                   <div class="whatapp_number">
+                    <label for="whatappNumber">WHATSAPP-NUMBER:</label><br>
+                    <input type="tel" id="whatsapp_number" name="waNo" onfocusout="icon('iconwa','whatsapp_number')" onkeyup="numval('wa')"  class="contain">
+                    <span id="iconwa"></span>
+                   </div>
+                   <div class="email">
+                       <label for="email">EMAIL:</label><br>
+                       <input type="text" id="email" name="email" onfocusout="icon('iconmail','email')" onkeyup="mailval()" placeholder="eg:- abc@gmail.com" class="contain">
+                       <span id="iconmail"></span>
+                   </div>
+                   <div class="occupation">
+                       <label for="occupation">OCUPATION:</label><br>
+                       <input type="text" id="occupation" name="occupation" placeholder="--occupation--" class="contain">
+                   </div>
+                   <div class="highest_qualification">
+                       <label for="highest_quali">HIGHEST QUALIFICATION:</label><br>
+                       <input type="text" id="highest_quali" name="highest_qualification" class="contain" placeholder="--Highest Qualification--">
+                   </div>
+                   <div class="dob">
+                       <label for="dob">Date of Birth:</label><br>
+                       <input type="date" id="dob" name="dob" class="contain">
+                   </div>
+                  <div class="course">
+                    <label for="course">COURSE:</label><br>
+                          <label for="phase-I">Phase-I</label>
+                          <input type="radio" name="course" value="phase-I" id="phase-I"style="margin-right: 20px;"> 
+                          <label for="phase-II">Phase-II</label>
+                          <input type="radio" name="course" value="phase-II" id="phase-II"style="margin-right: 20px;">
+                          <label for="both">Both</label> 
+                          <input type="radio" name="course" value="both" id="both"style="margin-right: 20px;"> 
+                  </div>
+                  <div class="photo">
+                      <label for="passport_photo">Passport-Photo</label><br>
+                      <input type="file" name="passport_photo" class="contain"style="width:200px" required>
+                  </div>
+                  <p style="color: red;">*** upload image size must below 2MB ***</p>
+                  <div class="photo">
+                    <label for="signature_photo">Signature</label><br>
+                    <input type="file" id="signature_photo" name="signature_photo" class="contain"style="width:200px" required>
+                  </div>
+
+                  <input type="submit" value="submit" id="submit" name="sbtn" class="submit">
+                </form>
+                <div class="contact_button">
+                    <a class="cl1" href="tel:7005167679">
+                        <img src="images/phone_black_24dp.svg" alt="" style="width: 20px;height:20px;margin-top:40px">
+                    </a>
+                    <a class="cl1" href="mailto:rpgofficial2021@gmail.com?&subject:&body=Add your comment here">
+                        <img src="images/email_black_24dp.svg" alt=""style="width: 20px;height:20px;margin-top:40px;margin-left:20px">
+                    </a>
+                </div>
+                <h5>©CopyRight,2021 by RPG,All Rights Reserved.</h5>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+
+    <!-- Instant Validation -->
+    <script>
+        function sameno(){
+            if(document.getElementById('sameno').checked){
+                document.getElementById('whatsapp_number').style.color="black";
+                document.getElementById('whatsapp_number').value=document.getElementById('contact_number').value;
+                document.getElementById("whatsapp_number").disabled = true;
+            }
+            else{
+             document.getElementById('whatsapp_number').value="";
+             document.getElementById("whatsapp_number").disabled = false;
+            }
+        }
+    function numval(x){
+        var check=/^[6-9]\d{9}$/;
+        if(x=="cn"){
+          document.getElementById('contact_number').setAttribute("maxlength","10");
+          if(!check.test(document.getElementById('contact_number').value)){
+              document.getElementById('contact_number').style.color="red";
+          }
+          else{
+              document.getElementById('contact_number').style.color="green";
+              document.getElementById('contact_number').style.fontWeight="bold";
+          }
+      }
+      else if(x=="wa"){
+          document.getElementById('whatsapp_number').setAttribute("maxlength","10");
+          if(!check.test(document.getElementById('whatsapp_number').value)){
+              document.getElementById('whatsapp_number').style.color="red";
+          }
+          else{
+              document.getElementById('whatsapp_number').style.color="green";
+              document.getElementById('whatsapp_number').style.fontWeight="bold";
+          }
+      }
+      
+      }
+      function mailval(){
+          var check=/^\w+[@][a-zA-Z]+[.][a-zA-Z]+$/;
+          if(!check.test(document.getElementById('email').value)){
+              document.getElementById('email').style.color="red";
+          }
+          else{
+              document.getElementById('email').style.color="green";
+              document.getElementById('email').style.fontWeight="bold";
+          }
+      }
+      function icon(ic,id){
+        var check=/^[6-9]\d{9}$/;
+        if(id=="email"){
+           check=/^\w+[@][a-zA-Z]+[.][a-zA-Z]+$/;
+        }
+        if(!check.test(document.getElementById(id).value)){
+            if(document.getElementById(id).value==""){
+                document.getElementById(ic).innerHTML="";
+            }else{
+              document.getElementById(ic).innerHTML="&#10060;";
+            }
+        }else{
+          document.getElementById(ic).innerHTML="&#9989;";
+        }
+      }
+      </script>
+      //
+   
+</body>
+</html>
