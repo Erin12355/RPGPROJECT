@@ -52,7 +52,7 @@
 					<label for="password">Password</label><br>
 					<input type="password" id="password" name="password" class="contain">
 				</div>
-				<div class="login"><a href="rpg_registration.html"><button type="submit" name="sbtn">LOG-IN</button></div></a>
+				<div class="login"><button type="submit" name="sbtn">LOG-IN</button></div>
 			</div>
 		</form>
     </div>
